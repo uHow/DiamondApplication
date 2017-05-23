@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiamondApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        ResizeMode="NoResize"
+        Title="Diamond database" Height="350" Width="525">
+    <TabControl x:Name="tabControl"  Height="322" Margin="0,0,0,0" Width="520" Background="{x:Null}" BorderBrush="{x:Null}">
+        <TabItem Header="View" Width="128">
+            <Grid />
+        </TabItem>
+        <TabItem Header="Add" Width="128">
+            <Grid />
+        </TabItem>
+        <TabItem Header="Remove" Width="128">
+            <Grid />
+        </TabItem>
+        <TabItem Header="Update" Width="128">
+            <Grid />
+        </TabItem>
+    </TabControl>
+
 </Window>
