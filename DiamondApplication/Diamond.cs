@@ -13,6 +13,7 @@ namespace DiamondApplication
     {
         int number;
         string name;
+        string typeDoping;
         double ratio;
         double percentDoping;
         
