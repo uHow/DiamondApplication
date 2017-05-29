@@ -17,12 +17,25 @@ namespace DiamondApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+    /// 
+
+    public partial class MainWindow : Window { 
+    
+        List<Diamond> diam;
+        int j=1;
+        public MainWindow(){
             InitializeComponent();
+            diam = new List<Diamond>();
+            diamTable.ItemsSource = diam;
+        }
+        private void AddButton_Click(object sender, RoutedEventArgs e){
+            if (txtID.Text != null && txtName.Text != null) {
+             diam.Add(new Diamond(txtID.Text, txtName.Text, txtRatio.Text, txttypeDoping.Text, txtpercentDoping.Text));
+            }
+        }
+        private void RemoveButton_Click(object sender, RoutedEventArgs e){
+            diam.Remove(diam[diamTable.SelectedIndex]);
+            diamTable.SelectedItem = null;
         }
     }
 }
