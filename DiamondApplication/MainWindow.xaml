@@ -9,16 +9,57 @@
         Title="Diamond database" Height="350" Width="525">
     <TabControl x:Name="tabControl"  Height="322" Margin="0,0,0,0" Width="520" Background="{x:Null}" BorderBrush="{x:Null}">
         <TabItem Header="View" Width="128">
-            <Grid />
+            <DataGrid Name="diamTable" IsReadOnly="True"/>
         </TabItem>
         <TabItem Header="Add" Width="128">
-            <Grid />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <Label Content="ID:"  Grid.Row="0" Grid.Column="0"/>
+                <TextBox Height="20" Width="100" Name="txtID"  Grid.Row="1" Grid.Column="0" Text="1"/>
+                <Label Content="Name:" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Height="20" Width="100"  Name="txtName" Grid.Row="1" Grid.Column="1" Text="diam1"/>
+                <Label Content="Ratio:" Grid.Row="0" Grid.Column="2"/>
+                <TextBox Height="20" Width="100"  Name="txtRatio" Grid.Row="1" Grid.Column="2" Text="5"/>
+                <Label Content="typeDoping:"  Grid.Row="0" Grid.Column="3"/>
+                <TextBox Height="20" Width="100" Name="txttypeDoping" Grid.Row="1" Grid.Column="3" Text="bor"/>
+                <Label Content="percentDoping:" Grid.Row="2" Grid.Column="0"/>
+                <TextBox Height="20" Width="100" Name="txtpercentDoping" Grid.Row="3" Grid.Column="0" Text="90"/>
+                <Label Name="result" Grid.Row="2" Grid.Column="0"/>
+                <Button Content="Add" Height="20" Width="100" Grid.Row="3" Grid.Column="3" Click="AddButton_Click"/>
+            </Grid>
         </TabItem>
-        <TabItem Header="Remove" Width="128">
-            <Grid />
+        <TabItem Header="Remove" Width="128" Name="Remove">
+            <Grid>
+                <ListBox Width="200" Height="100" Name="listRemove" Margin="10,30,304,162"/>
+                <Button Content="Remove" Height="20" Width="100" Click="RemoveButton_Click" Margin="280,30,134,242"/>
+            </Grid>
         </TabItem>
-        <TabItem Header="Update" Width="128">
-            <Grid />
+        <TabItem Header="Update" Width="128" Name="Update">
+            <Grid>
+                <ListBox  Height="100" Width="200" Name="listUpdate" Margin="22,27,292,167" SelectionChanged="listUpdate_SelectionChanged"/>
+                <Label Content="ID:"  Height="30" Width="80" Margin="243,27,191,237"/>
+                <TextBox Height="20" Width="100" Name="updtxtID" Margin="243,57,171,217"/>
+                <Label Content="Name:"  Height="30" Width="80" Margin="384,27,50,237"/>
+                <TextBox Height="20" Width="100" Name="updtxtName" Margin="384,57,30,217"/>
+                <Label Content="Ratio:"  Height="30" Width="80" Margin="243,87,191,177"/>
+                <TextBox Height="20" Width="100" Name="updtxtRatio"  Margin="243,117,171,157"/>
+                <Label Content="typeDoping:" Height="30" Width="80" Margin="384,87,50,177"/>
+                <TextBox Height="20" Width="100" Name="updtxttypeDoping" Margin="384,117,30,157"/>
+                <Label Content="percentDoping:" Height="30" Width="100" Margin="243,153,171,111"/>
+                <TextBox Height="20" Width="100" Name="updtxtpercentDoping" Margin="243,188,171,86"/>
+                <Button Content="Update" Height="20" Width="100" Click="UpdateButton_Click" Margin="384,187,30,87"/>
+            </Grid>
         </TabItem>
     </TabControl>
 

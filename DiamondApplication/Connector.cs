@@ -17,7 +17,7 @@ namespace DiamondApplication
     /// 4. Wywołaj metodę disconnect
     /// </summary>
     public class Connector
-    {
+    { 
         private MySql.Data.MySqlClient.MySqlConnection connection;
         private MySqlCommand cmd;
         private MySqlDataReader reader;
