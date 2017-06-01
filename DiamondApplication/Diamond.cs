@@ -69,12 +69,6 @@ namespace DiamondApplication {
             this.typeDoping = typeDoping;
             this.percentDoping = percentDoping;
         }
-        public Diamond(string number, string name, string ratio, string typeDoping, string percentDoping){
-            this.number = int.Parse(number);
-            this.name = name;
-            this.ratio = double.Parse(ratio);
-            this.typeDoping = typeDoping;
-            this.percentDoping = double.Parse(percentDoping);
-        }
+     
     }
 }

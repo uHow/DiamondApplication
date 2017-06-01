@@ -41,13 +41,25 @@
         </TabItem>
         <TabItem Header="Remove" Width="128" Name="Remove">
             <Grid>
-              <ListBox Width="200" Height="100" Name="listRemove" Margin="10,30,304,162"/>
-              <Button Content="Remove" Height="20" Width="100" Click="RemoveButton_Click" Margin="280,30,134,242"/>
+                <ListBox Width="200" Height="100" Name="listRemove" Margin="10,30,304,162" ItemsSource="{Binding}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Content="Remove" Height="20" Width="100" Click="RemoveButton_Click" Margin="280,30,134,242"/>
             </Grid>
         </TabItem>
         <TabItem Header="Update" Width="128" Name="Update">
             <Grid>
-                <ListBox  Height="100" Width="200" Name="listUpdate" Margin="22,27,292,167" SelectionChanged="listUpdate_SelectionChanged"/>
+                <ListBox  Height="100" Width="200" Name="listUpdate" Margin="22,27,292,167" ItemsSource="{Binding}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
                 <Label Content="ID:"  Height="30" Width="80" Margin="243,27,191,237"/>
                 <TextBox Height="20" Width="100" Name="updtxtID" Margin="243,57,171,217"/>
                 <Label Content="Name:"  Height="30" Width="80" Margin="384,27,50,237"/>
@@ -58,7 +70,9 @@
                 <TextBox Height="20" Width="100" Name="updtxttypeDoping" Margin="384,117,30,157"/>
                 <Label Content="percentDoping:" Height="30" Width="100" Margin="243,153,171,111"/>
                 <TextBox Height="20" Width="100" Name="updtxtpercentDoping" Margin="243,188,171,86"/>
-                
+                <Button x:Name="button" Content="Update" HorizontalAlignment="Left" Margin="389,188,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+                <Button x:Name="button1" Content="Copy" HorizontalAlignment="Left" Margin="389,232,0,0" VerticalAlignment="Top" Width="74" Click="button1_Click"/>
+
             </Grid>
         </TabItem>
     </TabControl>

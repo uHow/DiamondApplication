@@ -14,73 +14,72 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DiamondApplication{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// 
+    
     public partial class MainWindow : Window{
 
         List<Diamond> diam;
-        List<String> Samples;
         Connector conn;
-        public MainWindow(){
+        public MainWindow()
+        {
             InitializeComponent();
-            conn = new Connector();  
+            conn = new Connector();
             conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
             diam = conn.returnList();
             conn.Disconnect();
-            diamTable.ItemsSource = diam;
-            getSamples();
+            update();
         }
+            
+            
+        
         private void AddButton_Click(object sender, RoutedEventArgs e){
             if (txtID.Text != null && txtName.Text != null){
                 conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
                 conn.Insert(int.Parse(txtID.Text), txtName.Text, double.Parse(txtRatio.Text), txttypeDoping.Text, double.Parse(txtpercentDoping.Text));
                 diam = conn.returnList();
                 conn.Disconnect();
-                diamTable.ItemsSource = diam;
-                getSamples();
+                update();
             }
         }
           private void RemoveButton_Click(object sender, RoutedEventArgs e){
-            conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
-            conn.Delete(diam[listRemove.SelectedIndex].Number);
-            diam = conn.returnList();
-            conn.Disconnect();
-            diamTable.ItemsSource = diam;
-            getSamples();
-            //diam.Remove(diam[diamTable.SelectedIndex]);
-            //diamTable.SelectedItem = null;
-        }
-        private void UpdateButton_Click(object sender, RoutedEventArgs e) {
-            //conn.Update(diam[diamTable.SelectedIndex].Number, diam[diamTable.SelectedIndex].Name, diam[diamTable.SelectedIndex].Ratio, diam[diamTable.SelectedIndex].TypeDoping, diam[diamTable.SelectedIndex].PercentDoping);
-            conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
-            conn.Update(int.Parse(updtxtID.Text), updtxtName.Text, double.Parse(updtxtRatio.Text), updtxttypeDoping.Text, double.Parse(updtxtpercentDoping.Text));
-            diam = conn.returnList();
-            conn.Disconnect();
-            diamTable.ItemsSource = diam;
-            getSamples();
-            //diam.Remove(diam[diamTable.SelectedIndex]);
-            //diamTable.SelectedItem = null;
-        }
-        public void getSamples(){
-            Samples.Clear();
-            int i=0;
-            while(i<diam.LongCount()){
-                Samples.Add(diam[i].Name);
-                i++;
+            if (listRemove.SelectedItem != null)
+            {
+                conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
+                conn.Delete(diam[listRemove.SelectedIndex].Number);
+                diam = conn.returnList();
+                conn.Disconnect();
+                update();
             }
-            //if(Update.IsSelected == true)
-                listUpdate.ItemsSource = Samples;
-            //if(Remove.IsSelected == true)
-                listRemove.ItemsSource = Samples;
+        }
+        
+       
+        private void update()
+        {
+            diamTable.ItemsSource = diam;
+            listUpdate.ItemsSource = diam;
+            listRemove.ItemsSource = diam;
         }
 
-        private void listUpdate_SelectionChanged(object sender, SelectionChangedEventArgs e){
-            updtxtID.Text = diam[listUpdate.SelectedIndex].Number.ToString();
-            updtxtName.Text = diam[listUpdate.SelectedIndex].Name;
-            updtxtRatio.Text = diam[listUpdate.SelectedIndex].Ratio.ToString();
-            updtxtpercentDoping.Text = diam[listUpdate.SelectedIndex].PercentDoping.ToString();
-            updtxttypeDoping.Text = diam[listUpdate.SelectedIndex].TypeDoping;
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if (listUpdate.SelectedItem != null)
+            {
+                conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
+                conn.Update(int.Parse(updtxtID.Text), updtxtName.Text, double.Parse(updtxtRatio.Text), updtxttypeDoping.Text, double.Parse(updtxtpercentDoping.Text));
+                diam = conn.returnList();
+                conn.Disconnect();
+                update();
+            }
+        }
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            if (listUpdate.SelectedItem != null)
+            {
+                updtxtID.Text = diam[listUpdate.SelectedIndex].Number.ToString();
+                updtxtName.Text = diam[listUpdate.SelectedIndex].Name;
+                updtxtRatio.Text = diam[listUpdate.SelectedIndex].Ratio.ToString();
+                updtxtpercentDoping.Text = diam[listUpdate.SelectedIndex].PercentDoping.ToString();
+                updtxttypeDoping.Text = diam[listUpdate.SelectedIndex].TypeDoping;
+            }
         }
     }
 }
