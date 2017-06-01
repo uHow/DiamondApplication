@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="Diamond database" Height="350" Width="525">
-    <TabControl x:Name="tabControl"  Height="322" Margin="0,0,0,0" Width="520" Background="{x:Null}" BorderBrush="{x:Null}">
+    <TabControl x:Name="tabControl"  Height="322" Width="520" Background="{x:Null}" BorderBrush="{x:Null}">
         <TabItem Header="View" Width="128">
             <DataGrid Name="diamTable" IsReadOnly="True"/>
         </TabItem>
@@ -39,42 +39,40 @@
                 <Button Content="Add" Height="20" Width="100" Grid.Row="3" Grid.Column="3" Click="AddButton_Click"/>
             </Grid>
         </TabItem>
-        <TabItem Header="Remove" Width="128" Name="Remove">
+        <TabItem Header="Remove" Width="128">
             <Grid>
-                <ListBox Width="200" Height="100" Name="listRemove" Margin="10,30,304,162" ItemsSource="{Binding}" >
+                <ListBox Name="listRemove" Margin="10,10,10,40" ItemsSource="{Binding}" >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Name}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button Content="Remove" Height="20" Width="100" Click="RemoveButton_Click" Margin="280,30,134,242"/>
+                <Button Content="Remove" Height="20" Width="100" Margin="404,264,10,10" Click="RemoveButton_Click"/>
             </Grid>
         </TabItem>
-        <TabItem Header="Update" Width="128" Name="Update">
+        <TabItem Header="Update" Width="128">
             <Grid>
-                <ListBox  Height="100" Width="200" Name="listUpdate" Margin="22,27,292,167" ItemsSource="{Binding}">
+                <ListBox Name="listUpdate" Margin="10,10,10,130" ItemsSource="{Binding}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Name}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Label Content="ID:"  Height="30" Width="80" Margin="243,27,191,237"/>
-                <TextBox Height="20" Width="100" Name="updtxtID" Margin="243,57,171,217"/>
-                <Label Content="Name:"  Height="30" Width="80" Margin="384,27,50,237"/>
-                <TextBox Height="20" Width="100" Name="updtxtName" Margin="384,57,30,217"/>
-                <Label Content="Ratio:"  Height="30" Width="80" Margin="243,87,191,177"/>
-                <TextBox Height="20" Width="100" Name="updtxtRatio"  Margin="243,117,171,157"/>
-                <Label Content="typeDoping:" Height="30" Width="80" Margin="384,87,50,177"/>
-                <TextBox Height="20" Width="100" Name="updtxttypeDoping" Margin="384,117,30,157"/>
-                <Label Content="percentDoping:" Height="30" Width="100" Margin="243,153,171,111"/>
-                <TextBox Height="20" Width="100" Name="updtxtpercentDoping" Margin="243,188,171,86"/>
-                <Button x:Name="button" Content="Update" HorizontalAlignment="Left" Margin="389,188,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <Button x:Name="button1" Content="Copy" HorizontalAlignment="Left" Margin="389,232,0,0" VerticalAlignment="Top" Width="74" Click="button1_Click"/>
-
+                <Label Content="ID:" Height="30" Width="100" Margin="10,169,404,95"/>
+                <TextBox Name="updtxtID" Height="20" Width="100" Margin="10,199,404,75"/>
+                <Label Content="Name:" Height="30" Width="100" Margin="140,169,274,95"/>
+                <TextBox Name="updtxtName" Height="20" Width="100" Margin="140,199,274,75"/>
+                <Label Content="Ratio:" Height="30" Width="100" Margin="270,169,144,95"/>
+                <TextBox Name="updtxtRatio" Height="20" Width="100" Margin="270,199,144,75"/>
+                <Label Content="typeDoping:" Height="30" Width="100" Margin="10,219,404,45"/>
+                <TextBox Name="updtxttypeDoping" Height="20" Width="100" Margin="10,249,404,25"/>
+                <Label Content="percentDoping:" Height="30" Width="100" Margin="140,219,274,45"/>
+                <TextBox Name="updtxtpercentDoping" Height="20" Width="100" Margin="140,249,274,25"/>
+                <Button Content="Update" Height="20" Width="100" Margin="270,249,144,25" Click="updRemove_Click" x:Name="updRemove"/>
+                <Button Content="Copy" Height="20" Width="100" Margin="404,249,10,25" Click="updCopy_Click" x:Name="updCopy"/>
             </Grid>
         </TabItem>
     </TabControl>
-
 </Window>

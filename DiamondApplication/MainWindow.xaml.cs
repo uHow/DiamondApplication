@@ -14,11 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DiamondApplication{
-    
+    /// <summary>
+    /// Klasa inicjująca okno aplikacji oraz umożliwiająca działania na określonej bazie danych
+    /// </summary>
     public partial class MainWindow : Window{
 
         List<Diamond> diam;
         Connector conn;
+        /// <summary>
+        /// Metoda realizująca nawiązanie połącznie z określoną bazą danych, zwraca listę wszystkich rekordów w tabeli MySql a następnie 
+        /// kończy połączenie. 
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -28,11 +34,11 @@ namespace DiamondApplication{
             conn.Disconnect();
             update();
         }
-            
-            
-        
-        private void AddButton_Click(object sender, RoutedEventArgs e){
-            if (txtID.Text != null && txtName.Text != null){
+     
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtID.Text != null && txtName.Text != null)
+            {
                 conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
                 conn.Insert(int.Parse(txtID.Text), txtName.Text, double.Parse(txtRatio.Text), txttypeDoping.Text, double.Parse(txtpercentDoping.Text));
                 diam = conn.returnList();
@@ -40,7 +46,8 @@ namespace DiamondApplication{
                 update();
             }
         }
-          private void RemoveButton_Click(object sender, RoutedEventArgs e){
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
             if (listRemove.SelectedItem != null)
             {
                 conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
@@ -50,8 +57,7 @@ namespace DiamondApplication{
                 update();
             }
         }
-        
-       
+
         private void update()
         {
             diamTable.ItemsSource = diam;
@@ -59,7 +65,7 @@ namespace DiamondApplication{
             listRemove.ItemsSource = diam;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void updRemove_Click(object sender, RoutedEventArgs e)
         {
             if (listUpdate.SelectedItem != null)
             {
@@ -70,7 +76,8 @@ namespace DiamondApplication{
                 update();
             }
         }
-        private void button1_Click(object sender, RoutedEventArgs e)
+
+        private void updCopy_Click(object sender, RoutedEventArgs e)
         {
             if (listUpdate.SelectedItem != null)
             {
@@ -81,5 +88,6 @@ namespace DiamondApplication{
                 updtxttypeDoping.Text = diam[listUpdate.SelectedIndex].TypeDoping;
             }
         }
+
     }
 }
