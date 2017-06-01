@@ -1,0 +1,15 @@
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\bin\Debug\DiamondApplication.exe.config
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\bin\Debug\DiamondApplication.exe
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\bin\Debug\DiamondApplication.pdb
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\bin\Debug\MySql.Data.dll
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.csprojResolveAssemblyReference.cache
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\MainWindow.g.cs
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\App.g.cs
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication_MarkupCompile.cache
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication_MarkupCompile.lref
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\MainWindow.baml
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.g.resources
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.Properties.Resources.resources
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.csproj.GenerateResource.Cache
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.exe
+C:\Users\Michał\Desktop\DiamondApplication-master\DiamondApplication\obj\Debug\DiamondApplication.pdb
