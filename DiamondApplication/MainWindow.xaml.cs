@@ -19,11 +19,10 @@ namespace DiamondApplication{
     /// </summary>
     public partial class MainWindow : Window{
 
-        List<Diamond> diam;
-        Connector conn;
+        private List<Diamond> diam;
+        private Connector conn;
         /// <summary>
-        /// Metoda realizująca nawiązanie połącznie z określoną bazą danych, zwraca listę wszystkich rekordów w tabeli MySql a następnie 
-        /// kończy połączenie. 
+        /// Metoda inicjalizująca okno oraz pobierająca aktualny stan bazy danych.
         /// </summary>
         public MainWindow()
         {
