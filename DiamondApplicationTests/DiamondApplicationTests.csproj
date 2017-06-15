@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConnectorTests.cs" />
+    <Compile Include="DiamondTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

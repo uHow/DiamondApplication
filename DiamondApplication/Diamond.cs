@@ -22,7 +22,8 @@ namespace DiamondApplication {
                 this.number = value;
             }
         }
-        public string Name{
+        public string Name
+        {
             get{
                 return this.name;
             }

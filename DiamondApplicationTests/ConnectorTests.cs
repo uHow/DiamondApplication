@@ -14,27 +14,38 @@ namespace DiamondApplication.Tests
     [TestClass()]
     public class ConnectorTests
     {
-        [TestMethod()]
-        public void InsertTest()
-        {
+        MySql.Data.MySqlClient.MySqlConnection connection2;
+        MySqlCommand cmd;
+        MySqlDataReader reader;
 
-            MySql.Data.MySqlClient.MySqlConnection connection2 = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlDataReader reader;
-            int id = 0;
-            string name = "nazwa";
-            double ratio = 1;
-            string type = "typ";
-            double percent = 10;
+        public void Init()
+        {
+            connection2 = new MySql.Data.MySqlClient.MySqlConnection();
+            cmd = new MySqlCommand();
             cmd.Connection = connection2;
             cmd.CommandType = System.Data.CommandType.Text;
             connection2.ConnectionString = "server=192.168.0.20;uid=username;pwd=password;;database=project;";
-
+        }
+        public void ClearTable()
+        {
             connection2.Open();
             cmd.CommandText = "delete from diamonds";
             reader = cmd.ExecuteReader();
             reader.Close();
             connection2.Close();
+        }
+        [TestMethod()]
+        public void InsertTest()
+        {
+
+            int id = 0;
+            string name = "nazwa";
+            double ratio = 1;
+            string type = "typ";
+            double percent = 10;
+
+            Init();
+            ClearTable();
 
             Connector conn = new Connector();
             conn.Connect("192.168.0.20", "username", "password", "project", "diamonds");
@@ -65,21 +76,11 @@ namespace DiamondApplication.Tests
         public void DeleteTest()
         {
             int numberOfRows = 0;
-            int numberOfRows2 = 0;
-            MySql.Data.MySqlClient.MySqlConnection connection2 = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlDataReader reader;
-            cmd.Connection = connection2;
-            cmd.CommandType = System.Data.CommandType.Text;
-            connection2.ConnectionString = "server=192.168.0.20;uid=username;pwd=password;;database=project;";
-
+            Init();
+            ClearTable();
             connection2.Open();
-            cmd.CommandText = "select * from diamonds;";
+            cmd.CommandText = "Insert into diamonds values(1,'nazwa',2,'bor',13);";
             reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                numberOfRows++;
-            }
             reader.Close();
             connection2.Close();
 
@@ -93,29 +94,22 @@ namespace DiamondApplication.Tests
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                numberOfRows2++;
+                numberOfRows++;
             }
             reader.Close();
-            connection2.Close();
 
-            Assert.AreEqual(numberOfRows - 1, numberOfRows2);
+            Assert.AreEqual(numberOfRows, 0);
         }
 
         [TestMethod()]
         public void returnListTest()
         {
-            MySql.Data.MySqlClient.MySqlConnection connection2 = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlDataReader reader;
-            List<Diamond> lista = new List<Diamond>();
-            cmd.Connection = connection2;
-            cmd.CommandType = System.Data.CommandType.Text;
-            connection2.ConnectionString = "server=192.168.0.20;uid=username;pwd=password;;database=project;";
 
+            List<Diamond> lista = new List<Diamond>();
+
+            Init();
+            ClearTable();
             connection2.Open();
-            cmd.CommandText = "delete from diamonds";
-            reader = cmd.ExecuteReader();
-            reader.Close();
             cmd.CommandText = "Insert into diamonds values(1,'nazwa',1.3,'bor',13);";
             reader = cmd.ExecuteReader();
             reader.Close();
@@ -136,22 +130,14 @@ namespace DiamondApplication.Tests
         [TestMethod()]
         public void UpdateTest()
         {
-            MySql.Data.MySqlClient.MySqlConnection connection2 = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            MySqlDataReader reader;
             int id = 0;
             string name = "nazwa";
             double ratio = 1;
             string type = "typ";
             double percent = 10;
-            cmd.Connection = connection2;
-            cmd.CommandType = System.Data.CommandType.Text;
-            connection2.ConnectionString = "server=192.168.0.20;uid=username;pwd=password;;database=project;";
-
+            Init();
+            ClearTable();
             connection2.Open();
-            cmd.CommandText = "delete from diamonds";
-            reader = cmd.ExecuteReader();
-            reader.Close();
             cmd.CommandText = "Insert into diamonds values(1,'nazwa',1.3,'bor',13);";
             reader = cmd.ExecuteReader();
             reader.Close();
