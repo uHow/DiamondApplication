@@ -81,7 +81,7 @@ namespace DiamondApplication
             try
             {
                 cmd.CommandText = "Insert into " + table + " values( " + id + ", '" + name + "', " + ratio +
-                    ",' " + typeDoping + "', " + percentDoping + ");";
+                    ",'" + typeDoping + "', " + percentDoping + ");";
                 reader = cmd.ExecuteReader();
                 reader.Close();
             }
@@ -103,7 +103,7 @@ namespace DiamondApplication
         {
             try
             {
-                cmd.CommandText = "Update " + table + " set name=' " + name + " ', ratio= " + ratio + ", typeDoping='" +
+                cmd.CommandText = "Update " + table + " set name='" + name + "', ratio= " + ratio + ", typeDoping='" +
                     typeDoping + "', percentDoping= " + percentDoping + " where id= " + id + " ;";
 
                 reader = cmd.ExecuteReader();
