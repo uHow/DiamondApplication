@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondApplication", "DiamondApplication\DiamondApplication.csproj", "{44D99D21-44E0-49DB-82AC-866B154E4D71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondApplicationTests", "DiamondApplicationTests\DiamondApplicationTests.csproj", "{863425FE-1E9A-47ED-9525-5C6230E4361E}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UMLUseCaseDiagram1", "UMLUseCaseDiagram1\UMLUseCaseDiagram1.modelproj", "{CF168C54-4BB9-4C7F-B44C-B881209CF266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{863425FE-1E9A-47ED-9525-5C6230E4361E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863425FE-1E9A-47ED-9525-5C6230E4361E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863425FE-1E9A-47ED-9525-5C6230E4361E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF168C54-4BB9-4C7F-B44C-B881209CF266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF168C54-4BB9-4C7F-B44C-B881209CF266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF168C54-4BB9-4C7F-B44C-B881209CF266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF168C54-4BB9-4C7F-B44C-B881209CF266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

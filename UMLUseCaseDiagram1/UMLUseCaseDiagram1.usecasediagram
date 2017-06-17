@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ed0f2671-32f3-4390-ad21-89223fb3d544" name="UMLUseCaseDiagram1" linkedPackageId="e26d181a-1b0a-401c-a559-119d2f66c4fe" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b43ff972-c51b-4221-989c-3ddddac411f3">
+      <profileInstance Id="65ffd33c-536c-491a-ac25-9e2ec11d0ee8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8a518ee6-a1d5-4de8-ad34-72c3f6cc526a">
+      <profileInstance Id="52e0b217-2b11-4cf8-b13a-de0317aadcdd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4d31e207-7885-463f-be5f-e49b309c48f5" name="Delete Diamond" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c1a75711-7f27-4974-93fb-b4928117b50d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="0e8be5a5-f77a-4f65-bbd8-dad5481609a5" name="Close connection" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="591617af-819b-48d1-bc93-693afd2f4b36" />
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d84beb1e-1358-4029-9430-5c40d6865bb7" name="Add Diamond" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7e042394-85ab-43f2-9e0f-b8ea6201fbfa" />
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ece4eb03-193a-479e-9a3e-ee372a042f53" name="Update Diamond" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="362eb71e-37b6-4a4f-b37a-739fbc0ea54c" />
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="de169738-4e4a-476d-8ee4-4e887cc6f125" name="Get list of Diamonds" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2f8703a6-f361-4bc7-b16d-80030d2ad976" />
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="bc277d51-6e54-4646-9ac1-6f559e0f9266" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4d64fae-6acb-4dd8-a98d-6d0306982292" />
+        <targetEnds>
+          <association Id="9558ed94-f889-460b-95a1-aca02b37e275" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Open Main Window" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c697db01-6167-46f2-9b67-8a3a33f11e23" LastKnownName="Open Main Window" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad1976fe-5ed9-4fcb-9040-aab4c29aba4a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4c21d254-4648-403e-bcd6-5114a426b75a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d26ac267-c1b6-436e-8dc1-e5b4c84cc39c" name="Open Main Window" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="63b863d4-a869-44a6-8f0c-0918f6966d73" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5483644f-0f19-4df8-be95-93140a9add90" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8f6a0c55-4c60-4535-8bc7-d3f6cf127afc" name="Connect to Database" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd4e541b-208f-47fa-87bb-0885076d4c12" />
+        <targetEnds>
+          <association Id="af207e3f-0100-40f2-a6f2-869492dea9e9" isDerived="false" sourceEndRoleName="Connect to Database" targetEndRoleName="Select specific table" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9fac444e-5aa9-43a0-94f0-e4e0cf6ff312" LastKnownName="Select specific table" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed64ae38-1462-4230-aec3-33ec835721e6" name="Connect to Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0265b7e4-0fec-4318-9ecb-52c036c2274d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69331d3b-3196-4b71-864c-c11c6d2649f4" name="Select specific table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1188bc21-bec2-4f4d-b368-a4846aff8eee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="37d0ae27-f557-486f-a6d2-1039f98f752b" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9fac444e-5aa9-43a0-94f0-e4e0cf6ff312" name="Select specific table" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="db2abcbe-b62b-4b47-8e68-daeb4f5a0340" />
+        <targetEnds>
+          <association Id="5de50cc7-b90d-45d9-80d1-231a3a86bc82" isDerived="false" sourceEndRoleName="Select specific table" targetEndRoleName="Add Diamond" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d84beb1e-1358-4029-9430-5c40d6865bb7" LastKnownName="Add Diamond" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe77c7aa-6e26-40c5-8ecf-d93beb9a2566" name="Select specific table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3a05bae-3162-4eb1-a75c-c48828a2cd00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="078ec1bb-53cf-44b6-a4eb-724f7ffa8b89" name="Add Diamond" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5558e512-0167-4275-96e8-db7fb9ec5bb1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f625787f-c1bc-4bb4-8807-f8fa43f61c1f" />
+          </association>
+          <association Id="aa8aa54d-69d5-44d6-a9b3-4588320da96a" isDerived="false" sourceEndRoleName="Select specific table" targetEndRoleName="Update Diamond" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ece4eb03-193a-479e-9a3e-ee372a042f53" LastKnownName="Update Diamond" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8b2ce15-6870-4f71-afd6-438f9557a210" name="Select specific table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b3c1fa5-72f7-4cb5-a8e0-62d2b62bbf6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39b39cdc-0841-49a5-9567-2232d2206d56" name="Update Diamond" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cc31ab9e-139f-416b-b3b6-4c29f8473f8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="14c53733-717e-4d0a-9ee0-8994f94232e5" />
+          </association>
+          <association Id="eaa49a35-2049-4131-86c8-78cb0ee00aff" isDerived="false" sourceEndRoleName="Select specific table" targetEndRoleName="Delete Diamond" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4d31e207-7885-463f-be5f-e49b309c48f5" LastKnownName="Delete Diamond" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e56751b-b49a-487b-9ae2-078aaeffa2b0" name="Select specific table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9c9e60a7-edee-4f3f-9d31-2d64958f5fe1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="031e6d98-4ec9-4b66-9aa0-c2db88e1b4f6" name="Delete Diamond" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f1299d16-d19d-4b5b-b7fb-ea606dfc8d0e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5b39e4f7-a84b-4cf5-8398-930296a195d5" />
+          </association>
+          <association Id="d36ba846-1559-434c-b53b-c0e72065e73b" isDerived="false" sourceEndRoleName="Select specific table" targetEndRoleName="List of Diamonds" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="de169738-4e4a-476d-8ee4-4e887cc6f125" LastKnownName="Get list of Diamonds" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe970332-8051-4b7c-9ef6-d6a7ae9e06c6" name="Select specific table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="25225cee-485a-4d78-99bd-c4ff5e19c4ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43c4fdc3-643b-4561-ab63-531bf935606d" name="List of Diamonds" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="49d03561-da4f-4515-a697-ed1c3dad8383" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0fe42eb-2c4b-4c04-b4ed-1057ab3ed77d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c697db01-6167-46f2-9b67-8a3a33f11e23" name="Open Main Window" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b8c4be19-6c02-424f-81a1-8898e539fc0a" />
+        <targetEnds>
+          <association Id="4f85f8e6-0c75-48cb-9406-b341f56d381d" isDerived="false" sourceEndRoleName="Open Main Window" targetEndRoleName="Connect to Database" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8f6a0c55-4c60-4535-8bc7-d3f6cf127afc" LastKnownName="Connect to Database" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="da0f8ffb-2e49-432c-804f-097e1cf72c6a" name="Open Main Window" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4315d19f-395e-42c3-b484-cb7a3c66f408" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0aa470ed-30f2-44ef-ae56-e9816e0d1c78" name="Connect to Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="edf425d7-6444-4caa-a02d-86747b252a0b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e17274fb-ddc8-426e-90c7-f620b4ef6ce4" />
+          </association>
+          <association Id="6bb14d23-d393-4e00-a8c5-80c46236f842" isDerived="false" sourceEndRoleName="Open Main Window" targetEndRoleName="Close connection" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e8be5a5-f77a-4f65-bbd8-dad5481609a5" LastKnownName="Close connection" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f25f25a0-6c7f-4653-b9f5-e194e99cdec2" name="Open Main Window" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6f73cc7c-663f-4302-b0dc-740f594cb292" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="99a68cf3-3b6d-4f85-9c00-2e4a84733375" name="Close connection" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="70ae453c-89e3-4ef7-b181-e189e01445a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="06f02aa4-d6d7-43a9-b968-2beefa5be570" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e26d181a-1b0a-401c-a559-119d2f66c4fe" name="UMLUseCaseDiagram1">
+    <elementDefinition Id="729ea852-b4ff-4b85-92ef-6319f367c597" />
+  </package>
+</useCaseModelRoot>
