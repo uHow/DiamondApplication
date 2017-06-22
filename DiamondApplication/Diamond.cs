@@ -14,6 +14,9 @@ namespace DiamondApplication {
         private string typeDoping;
         private double ratio;
         private double percentDoping;
+        /// <summary>
+        /// Funkcja zwracająca numer próbki
+        /// </summary>
         public int Number{
             get{
                 return this.number;
@@ -22,6 +25,9 @@ namespace DiamondApplication {
                 this.number = value;
             }
         }
+        /// <summary>
+        /// Funkcja zwracająca nazwę próbki
+        /// </summary>
         public string Name
         {
             get{
@@ -31,6 +37,9 @@ namespace DiamondApplication {
                 this.name = value;
             }
         }
+        /// <summary>
+        /// Funkcja zwracająca nazwę domieszkowania
+        /// </summary>
         public string TypeDoping{
             get{
                 return this.typeDoping;
@@ -39,6 +48,9 @@ namespace DiamondApplication {
                 this.typeDoping = value;
             }
         }
+        /// <summary>
+        /// Funkcja zwracająca stosunek sp3/sp2
+        /// </summary>
         public double Ratio{
             get{
                 return this.ratio;
@@ -47,6 +59,9 @@ namespace DiamondApplication {
                 this.ratio = value;
             }
         }
+        /// <summary>
+        /// Funkcja zwracająca procent domieszkowania
+        /// </summary>
         public double PercentDoping{
             get{
                 return this.percentDoping;

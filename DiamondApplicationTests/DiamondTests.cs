@@ -15,36 +15,31 @@ namespace DiamondApplication.Tests
         public void NumberTest()
         {
             Diamond sample = new Diamond(1, "nazwa", 5, "bor", 15);
-            int numer = sample.Number;
-            Assert.AreEqual(numer, sample.Number);
+            Assert.AreEqual(1, sample.Number);
         }
-
+        [TestMethod()]
         public void NameTest()
         {
             Diamond sample = new Diamond(1, "nazwa", 5, "bor", 15);
-            string nazwa = sample.Name;
-            Assert.AreEqual(nazwa, sample.Name);
+            Assert.AreEqual("nazwa", sample.Name);
         }
-
+        [TestMethod()]
         public void RatioTest()
         {
             Diamond sample = new Diamond(1, "nazwa", 5, "bor", 15);
-            double stosunek = sample.Ratio;
-            Assert.AreEqual(stosunek, sample.Ratio);
+            Assert.AreEqual(5, sample.Ratio);
         }
-
+        [TestMethod()]
         public void TypeDopingTest()
         {
             Diamond sample = new Diamond(1, "nazwa", 5, "bor", 15);
-            string typ = sample.TypeDoping;
-            Assert.AreEqual(typ, sample.TypeDoping);
+            Assert.AreEqual("bor", sample.TypeDoping);
         }
-
+        [TestMethod()]
         public void PercentDopingTest()
         {
             Diamond sample = new Diamond(1, "nazwa", 5, "bor", 15);
-            double procent = sample.PercentDoping;
-            Assert.AreEqual(procent, sample.PercentDoping);
+            Assert.AreEqual(15, sample.PercentDoping);
         }
     }
 }

@@ -1,0 +1,3 @@
+﻿Profiling of 'DiamondApplication' started.
+DiamondApplication has exited.
+Profiling of 'DiamondApplication' stopped.
